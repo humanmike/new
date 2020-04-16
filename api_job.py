@@ -7,6 +7,7 @@ s = requests.session()
 
 
 def mubu_login_api():
+    print('holla')
     url = 'https://mubu.com/api/login/submit'
     data = {
         'phone': '15999555574',
@@ -30,4 +31,4 @@ def mubu_create_list():
 if __name__ == '__main__':
     data = mubu_login_api()
     mubu_create_list()
-    
+
