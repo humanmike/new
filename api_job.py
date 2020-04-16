@@ -1,5 +1,5 @@
 import requests
-import json
+import unittest
 
 url = 'https://mubu.com/login/password'
 
@@ -7,7 +7,6 @@ s = requests.session()
 
 
 def mubu_login_api():
-    print('holla')
     url = 'https://mubu.com/api/login/submit'
     data = {
         'phone': '15999555574',
