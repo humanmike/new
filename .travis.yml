@@ -13,4 +13,8 @@ install:
   - pip install poetry
   - poetry install -vvv
 script:
-  - python -m unittest discover
+  # 普通的执行方式
+  # - python -m unittest discover
+  # coverage的执行方式
+  - coverage run --source=test_api_job -m unittest discover
+  - coverage report
