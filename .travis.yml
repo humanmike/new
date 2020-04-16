@@ -16,5 +16,7 @@ script:
   # 普通的执行方式
   # - python -m unittest discover
   # coverage的执行方式
-  - coverage run --source=test_api_job -m unittest discover
-  - coverage report
+  # 为什么添加poetry run保证都是运行在虚拟环境里面
+  - poetry run coverage run --source=test_api_job -m unittest discover
+  - poetry run coverage report
+  - poetry run coveralls
