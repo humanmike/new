@@ -30,3 +30,4 @@ def mubu_create_list():
 if __name__ == '__main__':
     data = mubu_login_api()
     mubu_create_list()
+    

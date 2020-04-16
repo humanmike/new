@@ -1,0 +1,18 @@
+sudo: false
+language: python
+python:
+  - 3.5
+  - 3.6
+  - 3.7
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+    - python: 3.8
+      dist: xenial
+install:
+  # 针对每次的新环境安装相关依赖
+  - pip install pipenv
+  - pipenv install --dev
+script:
+  - python api_job.py
